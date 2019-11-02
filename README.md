@@ -15,7 +15,7 @@ Why to package the app with [Snapcraft](https://snapcraft.io/)?
 
 ## Install
 
-Go to the [Release][releases] page to download the snap file that we built.
+Go to [Release][release] page to download the snap file that we built.
 
 Then, run the following command to install it.
 
