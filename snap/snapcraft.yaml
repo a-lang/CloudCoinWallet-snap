@@ -1,0 +1,52 @@
+name: cloudcoinwallet
+version: "2.1.20"
+summary: CloudCoin Wallet Desktop Application (openjdk-11)
+base: core18
+description: |
+  CloudCoin is a digital currency. That cannot be counterfeited, controlled, 
+  tracked or stolen. CloudCoins cannot be double-spent, mined or lost. 
+  It is 100% private and requires no public ledgers, accounts, or encryption. 
+  CloudCoin is a completely fair and ethical monetary system. 
+confinement: devmode
+grade: stable
+
+apps:
+  blue:
+    command: bin/CloudCoinWallet.sh Blue
+    environment:
+      APP_VER: "2.1.20"
+      LC_ALL: "C.UTF-8"
+      JAVA_HOME: "$SNAP/usr/lib/jvm/java-11-openjdk-amd64"
+      PATH: "$JAVA_HOME/bin:$PATH"
+      XDG_DATA_HOME: "$SNAP/usr/share"
+      FONTCONFIG_PATH: "$SNAP/etc/fonts/config.d"
+      FONTCONFIG_FILE: "$SNAP/etc/fonts/fonts.conf"
+  dark:
+    command: bin/CloudCoinWallet.sh Dark
+    environment:
+      APP_VER: "2.1.20"
+      LC_ALL: "C.UTF-8"
+      JAVA_HOME: "$SNAP/usr/lib/jvm/java-11-openjdk-amd64"
+      PATH: "$JAVA_HOME/bin:$PATH"
+      XDG_DATA_HOME: "$SNAP/usr/share"
+      FONTCONFIG_PATH: "$SNAP/etc/fonts/config.d"
+      FONTCONFIG_FILE: "$SNAP/etc/fonts/fonts.conf"
+
+plugs:
+  unity7:
+  network:
+  home:
+  x11:
+
+parts:
+  cloudcoinwallet:
+    source: app/
+    plugin: dump
+    organize:
+      CloudCoinWallet.sh: bin/CloudCoinWallet.sh
+    stage-packages:
+      - fonts-dejavu-core
+      - libfontconfig1
+      - openjdk-11-jre-headless
+      - ca-certificates-java
+

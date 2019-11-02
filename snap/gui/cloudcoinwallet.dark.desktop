@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=CloudCoinWallet.Dark
+Comment=CloudCoin Wallet Desktop App - Dark Theme
+Icon=${SNAP}/meta/gui/cc_dark.png
+Exec=cloudcoinwallet.dark
+Terminal=false
+Categories=Finance;Network;
