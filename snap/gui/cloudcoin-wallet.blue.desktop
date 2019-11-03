@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=CloudCoin-Wallet.Blue
+Comment=CloudCoin Wallet Desktop App - Blue Theme
+Icon=${SNAP}/meta/gui/cc_blue.png
+Exec=cloudcoin-wallet.blue
+Terminal=false
+Categories=Finance;Network;
